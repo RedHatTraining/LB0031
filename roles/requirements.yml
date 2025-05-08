@@ -1,0 +1,10 @@
+---
+roles:
+  - name: gantsign.visual-studio-code-extensions
+    version: 2.4.0
+  - name: geerlingguy.gitlab
+    version: 3.2.0
+  - name: linux-system-roles.firewall
+    version: 0.2.1
+  - name: linux-system-roles.network
+    version: 1.4.0
