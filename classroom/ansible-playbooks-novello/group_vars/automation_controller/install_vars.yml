@@ -1,0 +1,8 @@
+---
+controller_pw_lines:
+  - admin_password
+  - pg_password
+  - automationhub_admin_password
+  - automationhub_pg_password
+controller_dir: /root/controller
+ignore_preflight_errors: true

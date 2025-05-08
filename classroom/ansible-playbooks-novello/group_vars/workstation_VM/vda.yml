@@ -1,0 +1,5 @@
+## Disk names can be found from OpenStack Images and soon DLE-WEB
+
+vda:
+  image_name: gl006-workstation-vda-9.2-202309281349
+  disk_size: 20

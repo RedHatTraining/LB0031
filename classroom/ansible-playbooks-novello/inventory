@@ -1,0 +1,88 @@
+[classroom_VM]
+classroom
+
+[workstation_VM]
+workstation
+
+# Delete if the course lab environment
+# doesn't use/require a utility server.
+[utility_VM]
+utility
+
+[lab_VMs]
+workstation
+server[a:b]
+
+#####################################
+## Used for Certificate Generation ##
+#####################################
+[certificate_authority]
+workstation
+
+## Place additional systems in this group to generate CA cerficates (such as hub, controller, eda-controller for Ansible)
+[server_VMs]
+workstation
+server[a:d]
+utility
+
+
+
+
+########################
+## RAM customizations ##
+########################
+[ram_2gb]
+classroom
+utility
+[ram_4gb]
+
+[ram_6gb]
+workstation
+[ram_8gb]
+
+########################
+## CPU customizations ##
+########################
+[cpu_4]
+[cpu_2]
+classroom
+utility
+workstation
+###################
+## Boot Ordering ##
+###################
+[depends_on_classroom]
+utility
+[depends_on_utility]
+workstation
+
+[depends_on_workstation]
+server[a:b]
+
+
+###########################
+#### AAP Needed Groups ####
+###########################
+## Uncomment to use and install AAP Platform Items
+## Used with dle.components.aap_install_controller_bundle.yml
+## See https://github.com/RedHatTraining/RH358/blob/main/classroom/ansible-playbooks-novello/site.yml (for how to pick components to install)
+
+#[aap_install_host]
+#workstation
+
+#[aap_database]
+#hub
+
+#[private_automation_hub]
+#hub
+
+#[automation_controller]
+
+#[eda_controller]
+
+#[ansible_automation_platform:children]
+#aap_database
+#aap_install_host
+#private_automation_hub
+#automation_controller
+#eda_controller

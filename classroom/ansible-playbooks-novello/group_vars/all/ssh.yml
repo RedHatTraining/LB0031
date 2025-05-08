@@ -1,0 +1,4 @@
+# Newer classrooms use 22022 for the SSH port to
+# the classroom VM.  If you are describing an
+# older course, it might be 22 or 10001
+classroom_ssh_port: 22022

@@ -1,0 +1,37 @@
+# This file contains the list of built images that
+# should be used for your course, in a variable
+# named 'built_images'.
+#
+# To create a factory or prod heat template,
+# a matching image is selected for
+# for each VM/block-device.
+#
+# If multiple images match a VM/block-device,
+# the most recent (by date) is selected.
+#
+# If *no* images match a VM/block-device,
+# then the base image is used.
+# The base image is always used/selected
+# when creating a builder heat template.
+#
+# The dle.heat_templates.extract_image_list.yml
+# playbook can generate this file.
+#
+#
+# built_images:
+#   - rh294-classroom-vda-8.4-202106251218
+#   - rh294-classroom-vda-8.4-202106281421
+#   - rh294-classroom-vda-8.4-202106301251
+#   - rh294-classroom-vda-8.4-202106301251
+#   - rh294-servera-vda-8.4-202106301640
+#   - rh294-serverb-vda-8.4-202106301641
+#   - rh294-serverc-vda-8.4-202106301641
+#   - rh294-serverd-vda-8.4-202106301641
+#   - rh294-workstation-vda-8.4-202106301641
+#   - rh294-servera-vda-8.4-202107011451
+#   - rh294-serverb-vda-8.4-202107011451
+#   - rh294-serverc-vda-8.4-202107011451
+#   - rh294-serverd-vda-8.4-202107011452
+#   - rh294-workstation-vda-8.4-202107011452
+
+built_images: []

@@ -1,0 +1,38 @@
+#!/bin/bash
+# Copy this file, and remove the `.template` suffix.
+# Edit the file as appropriate.
+#
+# Source this file (prior to running a playbook)
+# to load appropriate environment variables for ansible-playbook.
+
+# Below allows you to run from your laptop.
+# It assumes SSH hosts have been configured locally
+# of the form: <sku>_<host>
+#
+#    Ex: do374_workstation
+#
+# The dle.heat_templates.update_local_ssh_config.yml
+# will configure this for you...
+if [ "$(hostname)" != "workstation" ]; then
+  export ANSIBLE_INVENTORY=inventory.laptop
+fi
+
+####################################################
+# See: https://access.redhat.com/management/api
+#
+# An offline token, is different from an
+# "Access Token".  Provide an OFFLINE token below
+####################################################
+export RED_HAT_OFFLINE_TOKEN=eyJh...uKZE
+
+##############################################################################
+# Add env variables of the form:
+#
+#   ANSIBLE_GALAXY_SERVER__
+#
+# which match entries in the ansible.cfg file for the galaxy server list.
+#
+# The Automation Hub token can be obtained at:
+# * https://console.redhat.com/ansible/automation-hub/token
+##############################################################################
+export ANSIBLE_GALAXY_SERVER_AUTOMATION_HUB_TOKEN=eyJhbG....CqVdOLz_M

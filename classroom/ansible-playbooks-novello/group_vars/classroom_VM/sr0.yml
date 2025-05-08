@@ -1,0 +1,8 @@
+#https://tower-dle.ole.redhat.com/#/jobs/playbook/4932
+## Disk names can be found from OpenStack Images and soon DLE-WEB
+
+sr0:
+  image_name: rhel-9.4-x86_64-dvd
+  disk_size: 10
+  device_type: cdrom
+  ilt_image_override: "rhel-baseos-${RHELVER}*.iso"

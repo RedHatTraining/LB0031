@@ -1,0 +1,9 @@
+## Disk names can be found from OpenStack Images and soon DLE-WEB
+vda:
+  image_name: rhel-server-vda-9.2-202309290738
+  disk_size: 10
+
+vdb:
+  image_name: rhel-blankdisk-1G-20160208
+  disk_size: 1
+  exportable: no

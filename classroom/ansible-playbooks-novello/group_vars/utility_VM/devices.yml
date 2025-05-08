@@ -1,0 +1,3 @@
+block_devices:
+  - name: vda
+    boot_index: 0

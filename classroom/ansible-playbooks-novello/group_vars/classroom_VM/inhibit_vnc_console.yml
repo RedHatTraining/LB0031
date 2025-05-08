@@ -1,0 +1,3 @@
+# In a new version of ROL, you can hide the
+# VNC Console access from students/users.
+inhibit_vnc_console: true

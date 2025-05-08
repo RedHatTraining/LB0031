@@ -1,0 +1,7 @@
+block_devices:
+  - name: vda
+    boot_index: 0
+  - name: "{{ 'sr0' if use_scsi else 'hda' }}"
+    boot_index: -1
+  - name: "{{ 'sr1' if use_scsi else 'hdb' }}"
+    boot_index: -1

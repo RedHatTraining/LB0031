@@ -1,0 +1,27 @@
+---
+###########################################################
+# install with:
+# $ source env_vars.sh
+# $ ansible-galaxy install -r requirements.yml [--force]
+###########################################################
+collections:
+  - name: git@github.com:RedHatTraining/dle.tests.git
+    version: f50a2f1
+    type: git
+  - name: git@github.com:RedHatTraining/dle.components.git
+    version: v1.7.0
+    type: git
+  # - name: community.general
+  #   source: https://galaxy.ansible.com/
+  #   version: 5.5.0
+  - name: ansible.posix
+    source: https://console.redhat.com/api/automation-hub/
+    version: 1.4.0
+
+####################################################
+# You can also specify role requirements here:
+#roles:
+#  - name: linux-system-roles.firewall
+#  - name: linux-system-roles.network
+####################################################
+roles: []

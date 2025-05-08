@@ -1,0 +1,40 @@
+remote_repos:
+  - rh-certified
+  #- community
+hub_containers:
+  - registry: registry.redhat.io
+    namespace: ansible-automation-platform
+    images:
+      - ubi-minimal-rhel9:2.15.5-1
+collection_import_requirements:
+  rh-certified:
+    collections:
+      - name: ansible.controller
+      - name: ansible.utils
+      - name: ansible.netcommon
+      - name: ansible.posix
+      - name: ansible.windows
+      - name: ansible.network
+      - name: redhat.satellite
+      - name: redhat.rhel_system_roles
+      - name: redhat.openshift
+      - name: redhat.rhv
+      - name: ansible.eda
+      - name: redhat.insights_eda
+  #community:
+  #  collections:
+  #    - name: community.crypto
+  #      version: '>=2.16.0'
+  #    - name: community.general
+  #      version: '>=8.0.0'
+  #    - name: community.mysql
+  #      version: '>=3.7.0'
+  #    - name: containers.podman
+  #      version: '>=1.10.0'
+  #    - name: community.windows
+  #      version: '>=2.0.0'
+  # This community version of the ansible.netcommon collection
+  # is being pulled in as a dependency.
+  # The collection has more than 100 versions if it is not restricted.
+  #    - name: ansible.netcommon
+  #      version: '>=5.1.0'

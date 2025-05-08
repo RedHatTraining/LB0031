@@ -1,0 +1,6 @@
+# Classroom should have to virtual NICs;
+# the first is to the classroom network;
+# the second provides a connection to the external network.
+network_interfaces:
+  - network: classroom
+  - network: external

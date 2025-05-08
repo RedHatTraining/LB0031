@@ -1,0 +1,16 @@
+# Defines networks that are in use by
+# the classroom environment.
+
+networks:
+  student:
+    cidr: 172.25.250.0/24
+    domain: lab.example.com
+    platform_provided: no
+  classroom:
+    cidr: 172.25.252.0/24
+    domain: example.com
+    platform_provided: no
+  external:
+    platform_provided: yes
+  builder:
+    platform_provided: yes

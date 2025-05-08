@@ -1,0 +1,169 @@
+course_sku: RH297
+course_version: "9.2"
+course_technology: RHEL
+course_technology_version: "9.2"
+#This sets the VENUE variable in /etc/rht:
+course_venue: "novello"
+course_title: "CHANGE ME"
+#This allows the auto foundation rpm update service to be set to a different branch than main (Should be a PR number and name if building from a PR - for example -  found_rpm_branch_name: "PR-241")
+found_rpm_branch_name: "main"
+rhelver: "9.2"
+#This sets the BASERELEASE variable for the UCF/ILT scripts - when rendering the files for a next release based on the same technology version this number should be bumped
+baserelease: "1"
+
+#This variable populates the publisher variable in the mkSKUmanifests file:
+ilt_publisher: name
+
+#This boolean controls the creation of the mkmanifest script, when set to True it produces the script for creating the manifest only with IG and slides
+mini_ilt_manifest: False
+
+## Added for Ansible
+offline_token: eyJhbGciOiJIUzUxMiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI0NzQzYTkzMC03YmJiLTRkZGQtOTgzMS00ODcxNGRlZDc0YjUifQ.eyJpYXQiOjE3MjMwMzUwNzgsImp0aSI6Ijc3MDgwODU1LTM4YzYtNDg3Ni05MWE5LTYxMzc2ZjJkNGY3MiIsImlzcyI6Imh0dHBzOi8vc3NvLnJlZGhhdC5jb20vYXV0aC9yZWFsbXMvcmVkaGF0LWV4dGVybmFsIiwiYXVkIjoiaHR0cHM6Ly9zc28ucmVkaGF0LmNvbS9hdXRoL3JlYWxtcy9yZWRoYXQtZXh0ZXJuYWwiLCJzdWIiOiJmOjUyOGQ3NmZmLWY3MDgtNDNlZC04Y2Q1LWZlMTZmNGZlMGNlNjpyaHQtYWdsb2dvd3NraSIsInR5cCI6Ik9mZmxpbmUiLCJhenAiOiJyaHNtLWFwaSIsInNpZCI6IjQ4MzkwYTM4LTRjNDMtNGMzNC05ZjdhLWVmMzkwOWNjOTMzMyIsInNjb3BlIjoiYmFzaWMgcm9sZXMgd2ViLW9yaWdpbnMgY2xpZW50X3R5cGUucHJlX2tjMjUgb2ZmbGluZV9hY2Nlc3MifQ.l1Rs3peuXLP0VGnIQTQhXAacfp3gzNpH6M3K6FLVFCWH2t0onenIANrPKwjjZ5dcUBl5ZBOQ8uKhh89uOfx7LA
+automation_hub_token: eyJhbGciOiJIUzUxMiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI0NzQzYTkzMC03YmJiLTRkZGQtOTgzMS00ODcxNGRlZDc0YjUifQ.eyJpYXQiOjE3MjMwMzI0OTMsImp0aSI6IjBlYmUxOWQ4LWE1ZGItNDQ1YS05OTc1LWM3YTRjOTU5YTczNyIsImlzcyI6Imh0dHBzOi8vc3NvLnJlZGhhdC5jb20vYXV0aC9yZWFsbXMvcmVkaGF0LWV4dGVybmFsIiwiYXVkIjoiaHR0cHM6Ly9zc28ucmVkaGF0LmNvbS9hdXRoL3JlYWxtcy9yZWRoYXQtZXh0ZXJuYWwiLCJzdWIiOiJmOjUyOGQ3NmZmLWY3MDgtNDNlZC04Y2Q1LWZlMTZmNGZlMGNlNjpyaG4tZ3BzLS10bWljaGV0dCIsInR5cCI6Ik9mZmxpbmUiLCJhenAiOiJjbG91ZC1zZXJ2aWNlcyIsIm5vbmNlIjoiODVhZjBlNWYtZjYzYS00MjdkLTg3ODMtOTllMTkyY2I4OWIzIiwic2lkIjoiM2M0MDAxNmYtY2Q4ZC00NmMwLWEyMTgtMDQzNzJkNjAxNDhmIiwic2NvcGUiOiJvcGVuaWQgYmFzaWMgYXBpLmlhbS5zZXJ2aWNlX2FjY291bnRzIHJvbGVzIHdlYi1vcmlnaW5zIGNsaWVudF90eXBlLnByZV9rYzI1IG9mZmxpbmVfYWNjZXNzIn0.z1tYTBgqOX4hB6vTs6oBeKf6qFhciZF6jfw6mszG8ryiMfpeCHOIApt_To5wtIv0iDVI5vzudDJG3-N0MH4AUw
+## Added to support dle.components:
+vault_redhat_registry_password: !vault |
+  $ANSIBLE_VAULT;1.1;AES256
+  64653262346331653066363039613635346233633063386133616239336365316533633436333134
+  3363323038386132346335616532336433303837393535370a613966396664373764306334636532
+  33333566396337616563313766386436623065386138656132646365623438646633306663333462
+  3339666234386137330a363462663333346565376464313966386236643338313866393362656131
+  38316333623831356231373636386337363766386134323830333733646135646638
+vault_registry_password: !vault |
+  $ANSIBLE_VAULT;1.1;AES256
+  37633862626537336435353061303265383737323061616662356635633165383064313234323865
+  6437653239383436636362646635633161663937313936320a356262316139366434623466323534
+  34373461346662663366646131386133343433303763346338646437313165663064316331333936
+  3864646361643337310a363830343434616633616262353966383932643737376335353165636435
+  38383664313466346336646135353730363434633961383232386133353830363963663666336239
+  37343431343532623532396634363439633839306331333364313431363134663161366132376632
+  61346437356561333231363437313935613361386336356662616362363664366534633830613733
+  39613933663439626666
+redhat_registry_user: rht-aglogowski
+aap_subscription_number: 9212152
+
+#If True, include a builder network interface
+#in the builder Heat Template (If disabled the build
+#will require VPN).
+use_builder_to_build: True
+
+# If True, include a builder network interface
+# to the ROL-STAGE Heat Template.
+use_builder_in_factory: True
+
+# If True, deploy the classroom-api container - this requires the use_dns: variable to be set to yes.
+
+use_api: false
+
+#This variable allows you to choose dle-doit branch for the automated PR creation using the controller.
+dle_doit_branch: main
+# If set allows to overwrite the pypi server URL with a custom URL - this has higher priority then the hardcoded stage and prod URL:
+# pypi_url: yes
+
+# If a course uses dynolabs, the classroom directory
+# will have a different structure.
+uses_dynolabs: yes
+
+# If the classroom requires external internet
+# access in production, change below.
+classroom_requires_internet: no
+
+# This allows to skipp the foundation rpm installation
+# Leaving both fetch_rpm and shared_environment for now: both control the rpm installation, and either one would work (setting the fetch_rpm to false, or shared_environment to true)
+fetch_rpm: true
+# This adds lesson support:
+shared_environment: false
+#This allows to set the heat template branch location for dle-doit or for a course build on the controller:
+heat_branch_name: main
+
+# This variable allows you to target a specific inventory available on the controller. This is usefull for using branches, or performing feature tests (this works best with the previous heat_branch_name variable). Example: inventory_name: "RH358 SCSI"
+# inventory_name: "NAME OF THE INVENTORY"
+
+# If set to "yes" then additional cloud-init code is added to the classoom VM. Requires the usage of the dle.components collection (there is a playbook responsible for customizing the classroom VM with the VPN container)
+use_vpn: yes
+# If set to "yes" then additional conditions related to the classroom VM are added to the heat template
+use_ssh: yes
+# If set to "true" then the correct ssh instructions will be added to the heat template
+no_bastion: false
+# Added to support SCSI bus - when set to no the classroom VM will be using IDE drives and mount-points
+use_scsi: true
+# This variable allows to change the old dnsmasq architecture to the new container based DNS infrastracture. For new courses, it should be set to yes.
+use_dns: yes
+#The following option is required by use_ssh option - this is responsible for adding the required screen_reader capability into the heat template
+screen_reader: yes
+# If set to "yes" then additional cloud-init code is added to the workstation VM for the jupyter webapp container - it is recommended to include the respective playbook from the dle.components collection into the course customization. That playbook configures workstation for the use of the Jupyter container.
+use_classroom_webapp: yes
+#If set to "yes" then additional software config specific to Windows will be added to your heat template
+use_windows: no
+# If the lab environment is using a dedicated openshift cluster, set to OCP.
+# Otherwise use GLS.
+availability_zone: GLS
+
+#Optional variables that can be added:
+##Location of the GLS ssh key:
+#ssh_key: ~/.ssh/classroom-keys/id_rsa
+##The user to be used when connection to the classroom VM:
+#ucf_user: instructor
+##The user to be used when connecting to all the other VMs:
+devops_user: devops
+##The tag to be used when adding the VPN container to the classroom VM:
+##For courses using the bastion VM set the openvpn_tag to 8.4-1
+openvpn_tag: 8.4-2
+##The tag for the DNS container to be used by the bastion VM:
+dns_container_tag: 9.1
+##The subdomain container tag to be used by the utility VM:
+subdomain_container_tag: 9.1
+##A specific tag for using the classroom_webapp (jupyter) console:
+#classroom_webapp_tag: 8.6
+##Classroom VM ssh port:
+classroom_ssh_port: 22022
+##External IP of the classroom VM:
+#external: 150.239.52.67
+#The following is for use with the new dns architecture. It is used to populate the lab.example.com DNS zone files on utility - REMEMBER to adjust this to your course:
+dns_zones:
+  - name: lab.example.com
+    records:
+      - name: git
+        value: "172.25.250.5"
+        rev: "5"
+      - name: hub
+        value: "172.25.250.6"
+        rev: "6"
+      - name: controller
+        value: "172.25.250.7"
+        rev: "7"
+      - name: eda-controller
+        value: "172.25.250.8"
+        rev: "8"
+      - name: servera
+        value: "172.25.250.10"
+        rev: "10"
+      - name: serverb
+        value: "172.25.250.11"
+        rev: "11"
+      - name: serverc
+        value: "172.25.250.12"
+        rev: "12"
+      - name: serverd
+        value: "172.25.250.13"
+        rev: "13"
+      - name: servere
+        value: "172.25.250.14"
+        rev: "14"
+      - name: serverf
+        value: "172.25.250.15"
+        rev: "15"
+      - name: desktop
+        value: "172.25.250.18"
+        rev: "18"
+      - name: aap
+        value: "172.25.250.30"
+        rev: "30"
+      - name: satellite
+        value: "172.25.250.40"
+        rev: "40"
+      - name: capsule
+        value: "172.25.250.45"
+        rev: "45"
+      - name: idm
+        value: "172.25.250.50"
+        rev: "50"

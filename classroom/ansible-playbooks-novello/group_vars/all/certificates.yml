@@ -1,0 +1,32 @@
+---
+ca_cert_file: /etc/pki/tls/certs/classroom-ca.pem
+
+# Any host/server can "PUT" their CSR at this location
+# on the `certificate_authority` host.
+csr_dropoff_location: /etc/pki/tls/csrs/inbound
+
+# After the CSR is approved, certificates are available
+# at this location.
+csr_approved_location: /etc/pki/tls/csrs/approved
+
+# Location of the local cache of server certificates.
+# Download certs to this location, and then upload
+# them other servers.
+local_cert_cache: /tmp/certs
+
+# Variables to describe certificate-related files/directories for each host
+private_keys_dir: /etc/pki/tls/private
+server_certificates_dir: /etc/pki/tls/certs
+server_cert_file: "{{ ansible_facts['fqdn'] }}.crt"
+server_key_file: "{{ ansible_facts['fqdn'] }}.key"
+server_csr_file: "{{ ansible_facts['fqdn'] }}.csr"
+server_short_name: "{{ inventory_hostname }}"
+
+# Default certificate variables for all servers
+server_common_name: "{{ ansible_facts['fqdn'] }}"
+server_certificate_comment: "{{ inventory_hostname | capitalize }} Certificate"
+organization_name: Red Hat, Inc.
+organizational_unit_name: Training
+locality_name: Raleigh
+state_or_province_name: NC
+country_name: US

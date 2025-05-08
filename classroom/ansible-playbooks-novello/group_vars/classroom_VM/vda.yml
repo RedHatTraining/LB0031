@@ -1,0 +1,8 @@
+#https://tower-dle.ole.redhat.com/#/jobs/playbook/4932
+## Disk names can be found from OpenStack Images and soon DLE-WEB
+
+vda:
+  image_name: rhel-9.2-vda-default-kvm-image
+  disk_size: 10
+  exportable: yes
+  ilt_image_override: "rhel-classroom-${RHELVER}-*.qcow2"

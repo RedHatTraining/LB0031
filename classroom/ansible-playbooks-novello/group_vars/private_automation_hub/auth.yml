@@ -1,0 +1,13 @@
+---
+hub_auth_username: admin
+hub_auth_password: redhat
+hub_auth_host: hub.lab.example.com
+hub_auth_username_password: "{{ hub_auth_username }}:{{ hub_auth_password }}"
+hub_path_prefix: galaxy
+
+hub_users:
+  - username: student
+    first_name: Student
+    last_name: User
+    email: student@lab.example.com
+    password: redhat123

@@ -1,0 +1,27 @@
+depends_on: ""
+
+vm_CPUs: 1
+vm_RAM: 2048
+vm_disk_size: 10
+
+block_devices:
+  - name: vda
+    boot_index: 0
+
+network_interfaces:
+  - network: student
+use_config_drive: yes
+
+# By default, we do not allow server resets in OLE.
+# If a particular VM is allowed to be reset, then
+# add a group or host variable to override
+# the below variable.
+allow_server_resets: no
+
+# Set to yes, if the VM is intended to
+# have a graphical console/display in ILT.
+ilt_enable_graphical_console: no
+
+# Set to yes to prevent a VM
+# from having an accessible VNC console in ROL
+inhibit_vnc_console: no

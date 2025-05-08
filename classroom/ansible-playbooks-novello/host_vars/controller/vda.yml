@@ -1,0 +1,4 @@
+vda:
+  #image_name: rhel-server-vda-9.2-202309290738
+  image_name: rhel-server-vda-9.3-202311090853
+  disk_size: 10
